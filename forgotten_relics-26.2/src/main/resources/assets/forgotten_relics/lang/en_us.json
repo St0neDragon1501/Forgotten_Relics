@@ -1,7 +1,8 @@
 {
-  "itemGroup.forgotten_relics": "Example Mod Tab",
+  "itemGroup.forgotten_relics": "Forgotten Relics Mod Tab",
   "block.forgotten_relics.example_block": "Example Block",
   "item.forgotten_relics.example_item": "Example Item",
+  "item.forgotten_relics.hope": "Item of Hope",
 
   "forgotten_relics.configuration.title": "Forgotten Relics Configs",
   "forgotten_relics.configuration.section.forgotten_relics.common.toml": "Forgotten Relics Configs",
