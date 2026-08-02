@@ -33,7 +33,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(ForgottenRelics.MODID)
-
+   
 public class ForgottenRelics {
 	
     // Define mod id in a common place for everything to reference
