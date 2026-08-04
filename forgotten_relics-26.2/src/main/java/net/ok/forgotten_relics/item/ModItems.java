@@ -3,6 +3,7 @@ package net.ok.forgotten_relics.item;
 import net.ok.forgotten_relics.ForgottenRelics;
 
 import net.ok.forgotten_relics.ForgottenRelics;
+import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
