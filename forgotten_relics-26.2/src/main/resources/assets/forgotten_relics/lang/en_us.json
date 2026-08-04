@@ -1,14 +1,8 @@
 {
   "itemGroup.forgotten_relics": "Forgotten Relics Mod Tab",
-  "block.forgotten_relics.example_block": "Example Block",
-  "item.forgotten_relics.example_item": "Example Item",
-  "item.forgotten_relics.hope": "Item of Hope",
+  "item.forgotten_relics.hope": "Hope",
 
   "forgotten_relics.configuration.title": "Forgotten Relics Configs",
   "forgotten_relics.configuration.section.forgotten_relics.common.toml": "Forgotten Relics Configs",
-  "forgotten_relics.configuration.section.forgotten_relics.common.toml.title": "Forgotten Relics Configs",
-  "forgotten_relics.configuration.items": "Item List",
-  "forgotten_relics.configuration.logDirtBlock": "Log Dirt Block",
-  "forgotten_relics.configuration.magicNumberIntroduction": "Magic Number Text",
-  "forgotten_relics.configuration.magicNumber": "Magic Number"
+  "forgotten_relics.configuration.section.forgotten_relics.common.toml.title": "Forgotten Relics Configs"
 }

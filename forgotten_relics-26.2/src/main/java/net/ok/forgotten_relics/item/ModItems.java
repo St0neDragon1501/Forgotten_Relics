@@ -18,6 +18,7 @@ public class ModItems {
             properties -> properties);
 
 
+    
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
