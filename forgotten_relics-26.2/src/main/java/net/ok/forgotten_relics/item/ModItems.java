@@ -1,8 +1,9 @@
 package net.ok.forgotten_relics.item;
 
 import net.ok.forgotten_relics.ForgottenRelics;
+import net.ok.forgotten_relics.item.ForgottenWatchItem;
 
-import net.ok.forgotten_relics.ForgottenRelics;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -16,6 +17,11 @@ public class ModItems {
 
     public static final DeferredItem<Item> HOPE = ITEMS.registerSimpleItem("hope",
             properties -> properties);
+    
+    public static final DeferredItem<Item> WATCH = ITEMS.registerItem("watch",
+            properties -> new ForgottenWatchItem(properties));
+    
+    
 
 
     

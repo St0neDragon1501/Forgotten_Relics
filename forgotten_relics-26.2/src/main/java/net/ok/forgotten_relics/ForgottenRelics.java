@@ -67,6 +67,7 @@ public class ForgottenRelics {
 
     	if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.HOPE); 
+           
     	}
     }
 
