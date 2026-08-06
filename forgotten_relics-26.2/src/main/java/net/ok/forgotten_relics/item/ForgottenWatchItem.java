@@ -33,9 +33,9 @@ public class ForgottenWatchItem extends Item {
         Level level = context.getLevel(); 
         
         if(!level.isClientSide() ) {
-        ((ServerLevel) level).sendParticles(ParticleTypes.PORTAL,
-                context.getClickedPos().getX() + 0.5, context.getClickedPos().getY() + 0.5,
-                context.getClickedPos().getZ() + 0.5, 5, 0, 0, 0, 3);
+        ((ServerLevel) level).sendParticles(ParticleTypes.HEART,
+                context.getClickedPos().getX() + 0, context.getClickedPos().getY() + 0,
+                context.getClickedPos().getZ() + 0, 0, 0, 0, 0, 0);
         }
         return InteractionResult.SUCCESS;
     }

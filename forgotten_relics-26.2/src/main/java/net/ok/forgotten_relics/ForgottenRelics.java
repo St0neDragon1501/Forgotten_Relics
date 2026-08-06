@@ -19,9 +19,11 @@ import net.minecraft.world.level.material.MapColor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -30,6 +32,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
 
 import net.ok.forgotten_relics.item.ModItems;
 
@@ -67,13 +70,16 @@ public class ForgottenRelics {
 
     	if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.HOPE); 
-           
+            event.accept(ModItems.FORGOTTEN_BOW); 
+            event.accept(ModItems.WATCH); 
     	}
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
+   
+ // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
     }
+    
 }

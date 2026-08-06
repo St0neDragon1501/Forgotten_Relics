@@ -1,6 +1,7 @@
 {
   "itemGroup.forgotten_relics": "Forgotten Relics Mod Tab",
   "item.forgotten_relics.hope": "Hope",
+  "item.forgotten_relics.forgotten_bow": "Forgotten Bow",
 
   "forgotten_relics.configuration.title": "Forgotten Relics Configs",
   "forgotten_relics.configuration.section.forgotten_relics.common.toml": "Forgotten Relics Configs",
