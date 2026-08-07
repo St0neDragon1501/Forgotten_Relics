@@ -72,6 +72,7 @@ public class ForgottenRelics {
             event.accept(ModItems.HOPE); 
             event.accept(ModItems.FORGOTTEN_BOW); 
             event.accept(ModItems.WATCH); 
+            event.accept(ModItems.FORGOTTEN_SHIELD); 
     	}
     }
 

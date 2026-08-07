@@ -20,10 +20,10 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.core.particles.ParticleTypes; 
 
 
-public class ForgottenWatchItem extends Item {
+public class ForgottenWatch extends Item {
 	
 
-    public ForgottenWatchItem(Properties properties) {
+    public ForgottenWatch(Properties properties) {
         super(properties);
     }
     
