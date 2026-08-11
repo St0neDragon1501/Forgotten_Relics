@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -33,7 +34,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-
+import net.ok.forgotten_relics.entity.ModEntities;
 import net.ok.forgotten_relics.item.ModItems;
 
 @Mod(ForgottenRelics.MODID)
@@ -50,6 +51,7 @@ public class ForgottenRelics {
 
 
         ModItems.register(modEventBus);
+        ModEntities.ENTITY_TYPES.register(modEventBus); 
         
         
         NeoForge.EVENT_BUS.register(this);
@@ -82,5 +84,7 @@ public class ForgottenRelics {
     public void onServerStarting(ServerStartingEvent event) {
 
     }
+    
+    
     
 }
