@@ -1,0 +1,39 @@
+Add basic player capabilities
+- Add boolean hunger depletion
+
+Finalize watch functionality
+- Add persistent data for position and rotation
+- Add rewind sound
+- Add boolean ticking sound
+
+Shield funcitonality
+- Trigger effect on use if crouching
+- Drain hunger while activated
+- Spawn barrier
+	- Create a block in direction of player
+	- Create a block nearest to the player
+	- Cancel block creation if entity in the way
+	- Create multiple blocks
+	- Delete blocks once ability is turned off
+- Attempt to count shield as gold equipment
+
+Bow functionality
+- Add custom projectile
+	- Make undroppable; despawns eventually
+	- Custom size
+	- Custom gravity
+	- Custom speed (kinda slower than usual arrow)
+	- Custom damage
+	- Make (waterproof)
+	- breaks ravager stuff within 1.5 blocks every tick
+	- Turns grass, podzol, and mycelium to coarse dirt where it lands
+	- Cracks stone bricks where it lands
+	- Strips logs within 2 blocks every tick
+	- Pierces through all non-boss enemies
+	- Knocks back entities within 2 blocks a little bit (does no damage)
+- Add overcharge
+	- Allow for bow to be overdrawn
+	- Fire arrow after being overdrawn and released
+	- Drain hunger while overdrawing
+	- Release arrow prematurely as normal arrow if run out of hunger beforehand
+- Add overdraw, release, travel, knockback, piercing, and impact sounds
