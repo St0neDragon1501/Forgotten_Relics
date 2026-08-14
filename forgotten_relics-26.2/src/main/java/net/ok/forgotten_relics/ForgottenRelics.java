@@ -4,6 +4,8 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
+import net.ok.forgotten_relics.entity.BowBlastProjectileRenderer;
+import net.minecraft.client.renderer.entity.ArrowRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -33,7 +35,6 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
 import net.ok.forgotten_relics.entity.ModEntities;
 import net.ok.forgotten_relics.item.ModItems;
 
@@ -47,11 +48,11 @@ public class ForgottenRelics {
     public ForgottenRelics(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-
+        modEventBus.addListener(this::onClientSetup);
 
 
         ModItems.register(modEventBus);
-        ModEntities.ENTITY_TYPES.register(modEventBus); 
+        ModEntities.register(modEventBus);
         
         
         NeoForge.EVENT_BUS.register(this);
@@ -83,6 +84,17 @@ public class ForgottenRelics {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
+    }
+    
+    
+    //renderer that shows where to get to render
+    private void onClientSetup(FMLClientSetupEvent event) {
+        
+    	EntityRenderers.register(
+                ModEntities.BOW_BLAST.get(),
+                BowBlastProjectileRenderer::new
+        );
+    	
     }
     
     
