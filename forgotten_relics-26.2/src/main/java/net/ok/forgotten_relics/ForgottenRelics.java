@@ -37,6 +37,9 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ok.forgotten_relics.entity.ModEntities;
 import net.ok.forgotten_relics.item.ModItems;
+import net.ok.forgotten_relics.client.ModModelLayers;
+import net.ok.forgotten_relics.entity.BowBlastModel;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 
 @Mod(ForgottenRelics.MODID)
 public class ForgottenRelics {
@@ -59,6 +62,8 @@ public class ForgottenRelics {
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+        
+        modEventBus.addListener(this::onRegisterLayerDefinitions);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -89,12 +94,19 @@ public class ForgottenRelics {
     
     //renderer that shows where to get to render
     private void onClientSetup(FMLClientSetupEvent event) {
-        
-    	EntityRenderers.register(
-                ModEntities.BOW_BLAST.get(),
-                BowBlastProjectileRenderer::new
+        EntityRenderers.register(
+            ModEntities.BOW_BLAST.get(),
+            BowBlastProjectileRenderer::new
         );
-    	
+    }
+
+    private void onRegisterLayerDefinitions(
+            EntityRenderersEvent.RegisterLayerDefinitions event) {
+
+        event.registerLayerDefinition(
+            ModModelLayers.BOW_BLAST,
+            BowBlastModel::createBodyLayer
+        );
     }
     
     
