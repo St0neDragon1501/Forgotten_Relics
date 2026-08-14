@@ -14,20 +14,24 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import net.ok.forgotten_relics.ForgottenRelics;
 
+
+//allows BowBlast to be registed in the ForgottenRelic.class/create it so it can be summoned 
 public class ModEntities {
 
 	public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
 	        DeferredRegister.create(
-	                BuiltInRegistries.ENTITY_TYPE,
-	                ForgottenRelics.MODID
-	        );
+	                BuiltInRegistries.ENTITY_TYPE, ForgottenRelics.MODID);
 
+	
+	
 	public static final ResourceKey<EntityType<?>> BOW_BLAST_KEY =
 	        ResourceKey.create(
 	                Registries.ENTITY_TYPE,
 	                Identifier.parse(ForgottenRelics.MODID + ":bow_blast")
 	        );
 
+	
+	
 	public static final Supplier<EntityType<BowBlastProjectileEntity>> BOW_BLAST =
 	        ENTITY_TYPES.register("bow_blast", () ->
 	                EntityType.Builder.of(
