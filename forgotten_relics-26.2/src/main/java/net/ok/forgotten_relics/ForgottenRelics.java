@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
+import net.ok.forgotten_relics.block.ModBlocks;
 import net.ok.forgotten_relics.entity.BowBlastProjectileRenderer;
 import net.minecraft.client.renderer.entity.ArrowRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -53,7 +54,7 @@ public class ForgottenRelics {
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::onClientSetup);
 
-
+        ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModEntities.register(modEventBus);
         
