@@ -137,11 +137,7 @@ public class ShieldBlock extends HalfTransparentBlock {
             }
         }
 
-        level.scheduleTick(
-                pos,
-                this,
-                Mth.nextInt(random, 20, 40)
-        );
+        level.scheduleTick(pos,this,Mth.nextInt(random, 20, 40));
     }
 
     private boolean slightlyMelt(BlockState state,Level level,BlockPos pos) {
@@ -199,19 +195,19 @@ public class ShieldBlock extends HalfTransparentBlock {
     }
 
     @Override
-    protected void createBlockStateDefinition(
-            StateDefinition.Builder<Block, BlockState> builder
-    ) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+    	
         builder.add(AGE);
+        
     }
 
     @Override
-    protected ItemStack getCloneItemStack(
-            LevelReader level,
-            BlockPos pos,
-            BlockState state,
-            boolean includeData
-    ) {
+    protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
         return ItemStack.EMPTY;
     }
+    
+    
+    
 }
+
+
